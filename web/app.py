@@ -10,8 +10,10 @@ import os
 
 app = Flask(__name__)
 
+import tempfile
+
 # Cache directory
-CACHE_DIR = os.path.join(os.getcwd(), 'cache')
+CACHE_DIR = os.path.join(tempfile.gettempdir(), 'f1_cache')
 if not os.path.exists(CACHE_DIR):
     os.makedirs(CACHE_DIR)
 
